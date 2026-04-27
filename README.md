@@ -17,3 +17,6 @@ mosquitto_sub -h <Broker IP Addr> -t "comp3310/demo" -q 2
 ```
 mosquitto_pub -h <Broker IP Addr> -t "comp3310/demo" -q 2 -m "Hello from publisher"
 ```
+
+docker run -it --rm --name mqtt-publisher mqtt-app python Publisher.py
+docker run -it --rm --name mqtt-subscriber mqtt-app python Subscriber.py
